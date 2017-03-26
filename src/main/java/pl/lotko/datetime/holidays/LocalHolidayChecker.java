@@ -19,4 +19,12 @@ public interface LocalHolidayChecker {
     boolean isHoliday(LocalDate date);
 
     boolean isWorkday(LocalDate date);
+
+    default LocalDate advanceUntilWorkday(LocalDate date) {
+        LocalDate workDay = date;
+        while (!isWorkday(workDay)) {
+            workDay = workDay.plusDays(1);
+        }
+        return workDay;
+    }
 }
