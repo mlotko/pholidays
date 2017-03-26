@@ -11,14 +11,14 @@ import java.util.Locale;
 @Named
 public class PolishHolidayChecker implements LocalHolidayChecker {
 
-    private static final Locale POLISH_LOCALE = new Locale("pl");
+    private static final Locale POLAND = new Locale("pl", "PL");
 
     private final CatholicHoliday catholicHoliday = new CatholicHoliday();
     private final PolishPublicHoliday polishPublicHoliday = new PolishPublicHoliday();
 
     @Override
     public Locale locale() {
-        return POLISH_LOCALE;
+        return POLAND;
     }
 
     @Override
