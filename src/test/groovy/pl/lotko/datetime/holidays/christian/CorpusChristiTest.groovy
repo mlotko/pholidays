@@ -12,7 +12,7 @@ class CorpusChristiTest extends Specification {
         corpusChristi = new CorpusChristi()
     }
 
-    def "Easter Monday positive check"() {
+    def "Corpus Christi positive check"() {
         expect:
         corpusChristi.isOn(someEaster)
 
